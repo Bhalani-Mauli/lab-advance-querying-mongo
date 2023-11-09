@@ -37,6 +37,18 @@ $and: [
 
 <!-- Your Code Goes Here -->
 
+db.getCollection('companies').find(
+{
+$and: [
+{
+'ipo.valuation_amount': { $gt: 10000000 }
+},
+{ founded_year: { $lt: 2010 } }
+]
+},
+{ name: 1, ipo: 1, \_id: 0 }
+);
+
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
 <!-- Your Code Goes Here -->
