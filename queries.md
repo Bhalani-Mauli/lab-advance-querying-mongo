@@ -154,6 +154,12 @@ db.getCollection('companies')
 
 <!-- Your Code Goes Here -->
 
+```
+db.getCollection('companies')
+  .find({}, { name: 1, founded_year: 1, _id: 0 })
+  .sort({ founded_year: -1 });
+```
+
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
 <!-- Your Code Goes Here -->
